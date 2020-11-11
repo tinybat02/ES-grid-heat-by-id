@@ -1,0 +1,21 @@
+{
+  "type": "panel",
+  "name": "ES Grid Heat ID",
+  "id": "id-grid-heat-by-id",
+  "dataFormats": ["table"],
+  "info": {
+    "description": "ES Grid Heat ID",
+    "author": {
+      "name": "Nam Le"
+    },
+    "keywords": [],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
