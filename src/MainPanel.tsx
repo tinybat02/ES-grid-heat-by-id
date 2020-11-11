@@ -12,10 +12,7 @@ import { Style, Text, Stroke, Fill } from 'ol/style';
 import { pointerMove } from 'ol/events/condition';
 import { nanoid } from 'nanoid';
 import { processData, createHeatLayer } from './util/helpers';
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
 import 'ol/ol.css';
-import './css/main.css';
 
 interface Props extends PanelProps<PanelOptions> {}
 interface State {
@@ -78,7 +75,7 @@ export class MainPanel extends PureComponent<Props, State> {
       const list = Object.keys(this.perID).sort(
         (a, b) => Object.keys(this.perID[b]).length - Object.keys(this.perID[a]).length
       );
-      this.setState({ options: ['None', ...list] });
+      this.setState({ options: list });
     }
 
     const hoverInteraction = new Select({
@@ -124,12 +121,12 @@ export class MainPanel extends PureComponent<Props, State> {
       );
 
       if (this.state.current == 'None') {
-        this.setState({ options: ['None', ...list] });
+        this.setState({ options: list });
         return;
       }
 
       if (!this.perID[this.state.current]) {
-        this.setState({ options: ['None', ...list], current: 'None' });
+        this.setState({ options: list, current: 'None' });
         return;
       }
 
@@ -172,8 +169,8 @@ export class MainPanel extends PureComponent<Props, State> {
       });
   }
 
-  onSelect = (option: { value: string; label: React.ReactNode }) => {
-    this.setState({ current: option.value });
+  onSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({ current: e.target.value });
   };
 
   render() {
@@ -182,7 +179,14 @@ export class MainPanel extends PureComponent<Props, State> {
 
     return (
       <div style={{ width, height }}>
-        <Dropdown className="hash-dropdown" options={options} onChange={this.onSelect} value={current} />
+        <select id="selector" style={{ width: 250 }} onChange={this.onSelect} value={current}>
+          <option>None</option>
+          {options.map(item => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
         <div id={this.id} style={{ width, height: height - 40 }}></div>
       </div>
     );

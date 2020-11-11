@@ -17152,68 +17152,6 @@ function isnan (val) {
 
 /***/ }),
 
-/***/ "../node_modules/classnames/index.js":
-/*!*******************************************!*\
-  !*** ../node_modules/classnames/index.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if ( true && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-}());
-
-
-/***/ }),
-
 /***/ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/dist/cjs.js!../node_modules/ol/ol.css":
 /*!***********************************************************************************************************************************************************************!*\
   !*** ../node_modules/css-loader/dist/cjs.js??ref--8-1!../node_modules/postcss-loader/src??ref--8-2!../node_modules/sass-loader/dist/cjs.js!../node_modules/ol/ol.css ***!
@@ -17226,42 +17164,6 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../css-loader/dist/run
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
 exports.push([module.i, ".ol-box {\n  box-sizing: border-box;\n  border-radius: 2px;\n  border: 2px solid blue; }\n\n.ol-mouse-position {\n  top: 8px;\n  right: 8px;\n  position: absolute; }\n\n.ol-scale-line {\n  background: rgba(0, 60, 136, 0.3);\n  border-radius: 4px;\n  bottom: 8px;\n  left: 8px;\n  padding: 2px;\n  position: absolute; }\n\n.ol-scale-line-inner {\n  border: 1px solid #eee;\n  border-top: none;\n  color: #eee;\n  font-size: 10px;\n  text-align: center;\n  margin: 1px;\n  will-change: contents, width;\n  transition: all 0.25s; }\n\n.ol-scale-bar {\n  position: absolute;\n  bottom: 8px;\n  left: 8px; }\n\n.ol-scale-step-marker {\n  width: 1px;\n  height: 15px;\n  background-color: #000000;\n  float: right;\n  z-Index: 10; }\n\n.ol-scale-step-text {\n  position: absolute;\n  bottom: -5px;\n  font-size: 12px;\n  z-Index: 11;\n  color: #000000;\n  text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF; }\n\n.ol-scale-text {\n  position: absolute;\n  font-size: 14px;\n  text-align: center;\n  bottom: 25px;\n  color: #000000;\n  text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF; }\n\n.ol-scale-singlebar {\n  position: relative;\n  height: 10px;\n  z-Index: 9;\n  box-sizing: border-box;\n  border: 1px solid black; }\n\n.ol-unsupported {\n  display: none; }\n\n.ol-viewport, .ol-unselectable {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }\n\n.ol-selectable {\n  -webkit-touch-callout: default;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text;\n  user-select: text; }\n\n.ol-grabbing {\n  cursor: -webkit-grabbing;\n  cursor: grabbing; }\n\n.ol-grab {\n  cursor: move;\n  cursor: -webkit-grab;\n  cursor: grab; }\n\n.ol-control {\n  position: absolute;\n  background-color: rgba(255, 255, 255, 0.4);\n  border-radius: 4px;\n  padding: 2px; }\n\n.ol-control:hover {\n  background-color: rgba(255, 255, 255, 0.6); }\n\n.ol-zoom {\n  top: .5em;\n  left: .5em; }\n\n.ol-rotate {\n  top: .5em;\n  right: .5em;\n  transition: opacity .25s linear, visibility 0s linear; }\n\n.ol-rotate.ol-hidden {\n  opacity: 0;\n  visibility: hidden;\n  transition: opacity .25s linear, visibility 0s linear .25s; }\n\n.ol-zoom-extent {\n  top: 4.643em;\n  left: .5em; }\n\n.ol-full-screen {\n  right: .5em;\n  top: .5em; }\n\n.ol-control button {\n  display: block;\n  margin: 1px;\n  padding: 0;\n  color: white;\n  font-size: 1.14em;\n  font-weight: bold;\n  text-decoration: none;\n  text-align: center;\n  height: 1.375em;\n  width: 1.375em;\n  line-height: .4em;\n  background-color: rgba(0, 60, 136, 0.5);\n  border: none;\n  border-radius: 2px; }\n\n.ol-control button::-moz-focus-inner {\n  border: none;\n  padding: 0; }\n\n.ol-zoom-extent button {\n  line-height: 1.4em; }\n\n.ol-compass {\n  display: block;\n  font-weight: normal;\n  font-size: 1.2em;\n  will-change: transform; }\n\n.ol-touch .ol-control button {\n  font-size: 1.5em; }\n\n.ol-touch .ol-zoom-extent {\n  top: 5.5em; }\n\n.ol-control button:hover,\n.ol-control button:focus {\n  text-decoration: none;\n  background-color: rgba(0, 60, 136, 0.7); }\n\n.ol-zoom .ol-zoom-in {\n  border-radius: 2px 2px 0 0; }\n\n.ol-zoom .ol-zoom-out {\n  border-radius: 0 0 2px 2px; }\n\n.ol-attribution {\n  text-align: right;\n  bottom: .5em;\n  right: .5em;\n  max-width: calc(100% - 1.3em); }\n\n.ol-attribution ul {\n  margin: 0;\n  padding: 0 .5em;\n  color: #000;\n  text-shadow: 0 0 2px #fff; }\n\n.ol-attribution li {\n  display: inline;\n  list-style: none; }\n\n.ol-attribution li:not(:last-child):after {\n  content: \" \"; }\n\n.ol-attribution img {\n  max-height: 2em;\n  max-width: inherit;\n  vertical-align: middle; }\n\n.ol-attribution ul, .ol-attribution button {\n  display: inline-block; }\n\n.ol-attribution.ol-collapsed ul {\n  display: none; }\n\n.ol-attribution:not(.ol-collapsed) {\n  background: rgba(255, 255, 255, 0.8); }\n\n.ol-attribution.ol-uncollapsible {\n  bottom: 0;\n  right: 0;\n  border-radius: 4px 0 0; }\n\n.ol-attribution.ol-uncollapsible img {\n  margin-top: -.2em;\n  max-height: 1.6em; }\n\n.ol-attribution.ol-uncollapsible button {\n  display: none; }\n\n.ol-zoomslider {\n  top: 4.5em;\n  left: .5em;\n  height: 200px; }\n\n.ol-zoomslider button {\n  position: relative;\n  height: 10px; }\n\n.ol-touch .ol-zoomslider {\n  top: 5.5em; }\n\n.ol-overviewmap {\n  left: 0.5em;\n  bottom: 0.5em; }\n\n.ol-overviewmap.ol-uncollapsible {\n  bottom: 0;\n  left: 0;\n  border-radius: 0 4px 0 0; }\n\n.ol-overviewmap .ol-overviewmap-map,\n.ol-overviewmap button {\n  display: inline-block; }\n\n.ol-overviewmap .ol-overviewmap-map {\n  border: 1px solid #7b98bc;\n  height: 150px;\n  margin: 2px;\n  width: 150px; }\n\n.ol-overviewmap:not(.ol-collapsed) button {\n  bottom: 1px;\n  left: 2px;\n  position: absolute; }\n\n.ol-overviewmap.ol-collapsed .ol-overviewmap-map,\n.ol-overviewmap.ol-uncollapsible button {\n  display: none; }\n\n.ol-overviewmap:not(.ol-collapsed) {\n  background: rgba(255, 255, 255, 0.8); }\n\n.ol-overviewmap-box {\n  border: 2px dotted rgba(0, 60, 136, 0.7); }\n\n.ol-overviewmap .ol-overviewmap-box:hover {\n  cursor: move; }\n", "",{"version":3,"sources":["ol.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB,EAAE;;AAE1B;EACE,QAAQ;EACR,UAAU;EACV,kBAAkB,EAAE;;AAEtB;EACE,iCAAiC;EACjC,kBAAkB;EAClB,WAAW;EACX,SAAS;EACT,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,sBAAsB;EACtB,gBAAgB;EAChB,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,WAAW;EACX,4BAA4B;EAC5B,qBAAqB,EAAE;;AAEzB;EACE,kBAAkB;EAClB,WAAW;EACX,SAAS,EAAE;;AAEb;EACE,UAAU;EACV,YAAY;EACZ,yBAAyB;EACzB,YAAY;EACZ,WAAW,EAAE;;AAEf;EACE,kBAAkB;EAClB,YAAY;EACZ,eAAe;EACf,WAAW;EACX,cAAc;EACd,yEAAyE,EAAE;;AAE7E;EACE,kBAAkB;EAClB,eAAe;EACf,kBAAkB;EAClB,YAAY;EACZ,cAAc;EACd,yEAAyE,EAAE;;AAE7E;EACE,kBAAkB;EAClB,YAAY;EACZ,UAAU;EACV,sBAAsB;EACtB,uBAAuB,EAAE;;AAE3B;EACE,aAAa,EAAE;;AAEjB;EACE,2BAA2B;EAC3B,yBAAyB;EACzB,sBAAsB;EACtB,qBAAqB;EACrB,iBAAiB;EACjB,6CAA6C,EAAE;;AAEjD;EACE,8BAA8B;EAC9B,yBAAyB;EACzB,sBAAsB;EACtB,qBAAqB;EACrB,iBAAiB,EAAE;;AAErB;EACE,wBAAwB;EAExB,gBAAgB,EAAE;;AAEpB;EACE,YAAY;EACZ,oBAAoB;EAEpB,YAAY,EAAE;;AAEhB;EACE,kBAAkB;EAClB,0CAA0C;EAC1C,kBAAkB;EAClB,YAAY,EAAE;;AAEhB;EACE,0CAA0C,EAAE;;AAE9C;EACE,SAAS;EACT,UAAU,EAAE;;AAEd;EACE,SAAS;EACT,WAAW;EACX,qDAAqD,EAAE;;AAEzD;EACE,UAAU;EACV,kBAAkB;EAClB,0DAA0D,EAAE;;AAE9D;EACE,YAAY;EACZ,UAAU,EAAE;;AAEd;EACE,WAAW;EACX,SAAS,EAAE;;AAEb;EACE,cAAc;EACd,WAAW;EACX,UAAU;EACV,YAAY;EACZ,iBAAiB;EACjB,iBAAiB;EACjB,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,cAAc;EACd,iBAAiB;EACjB,uCAAuC;EACvC,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,YAAY;EACZ,UAAU,EAAE;;AAEd;EACE,kBAAkB,EAAE;;AAEtB;EACE,cAAc;EACd,mBAAmB;EACnB,gBAAgB;EAChB,sBAAsB,EAAE;;AAE1B;EACE,gBAAgB,EAAE;;AAEpB;EACE,UAAU,EAAE;;AAEd;;EAEE,qBAAqB;EACrB,uCAAuC,EAAE;;AAE3C;EACE,0BAA0B,EAAE;;AAE9B;EACE,0BAA0B,EAAE;;AAE9B;EACE,iBAAiB;EACjB,YAAY;EACZ,WAAW;EACX,6BAA6B,EAAE;;AAEjC;EACE,SAAS;EACT,eAAe;EACf,WAAW;EACX,yBAAyB,EAAE;;AAE7B;EACE,eAAe;EACf,gBAAgB,EAAE;;AAEpB;EACE,YAAY,EAAE;;AAEhB;EACE,eAAe;EACf,kBAAkB;EAClB,sBAAsB,EAAE;;AAE1B;EACE,qBAAqB,EAAE;;AAEzB;EACE,aAAa,EAAE;;AAEjB;EACE,oCAAoC,EAAE;;AAExC;EACE,SAAS;EACT,QAAQ;EACR,sBAAsB,EAAE;;AAE1B;EACE,iBAAiB;EACjB,iBAAiB,EAAE;;AAErB;EACE,aAAa,EAAE;;AAEjB;EACE,UAAU;EACV,UAAU;EACV,aAAa,EAAE;;AAEjB;EACE,kBAAkB;EAClB,YAAY,EAAE;;AAEhB;EACE,UAAU,EAAE;;AAEd;EACE,WAAW;EACX,aAAa,EAAE;;AAEjB;EACE,SAAS;EACT,OAAO;EACP,wBAAwB,EAAE;;AAE5B;;EAEE,qBAAqB,EAAE;;AAEzB;EACE,yBAAyB;EACzB,aAAa;EACb,WAAW;EACX,YAAY,EAAE;;AAEhB;EACE,WAAW;EACX,SAAS;EACT,kBAAkB,EAAE;;AAEtB;;EAEE,aAAa,EAAE;;AAEjB;EACE,oCAAoC,EAAE;;AAExC;EACE,wCAAwC,EAAE;;AAE5C;EACE,YAAY,EAAE","file":"ol.css","sourcesContent":[".ol-box {\n  box-sizing: border-box;\n  border-radius: 2px;\n  border: 2px solid blue; }\n\n.ol-mouse-position {\n  top: 8px;\n  right: 8px;\n  position: absolute; }\n\n.ol-scale-line {\n  background: rgba(0, 60, 136, 0.3);\n  border-radius: 4px;\n  bottom: 8px;\n  left: 8px;\n  padding: 2px;\n  position: absolute; }\n\n.ol-scale-line-inner {\n  border: 1px solid #eee;\n  border-top: none;\n  color: #eee;\n  font-size: 10px;\n  text-align: center;\n  margin: 1px;\n  will-change: contents, width;\n  transition: all 0.25s; }\n\n.ol-scale-bar {\n  position: absolute;\n  bottom: 8px;\n  left: 8px; }\n\n.ol-scale-step-marker {\n  width: 1px;\n  height: 15px;\n  background-color: #000000;\n  float: right;\n  z-Index: 10; }\n\n.ol-scale-step-text {\n  position: absolute;\n  bottom: -5px;\n  font-size: 12px;\n  z-Index: 11;\n  color: #000000;\n  text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF; }\n\n.ol-scale-text {\n  position: absolute;\n  font-size: 14px;\n  text-align: center;\n  bottom: 25px;\n  color: #000000;\n  text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF; }\n\n.ol-scale-singlebar {\n  position: relative;\n  height: 10px;\n  z-Index: 9;\n  box-sizing: border-box;\n  border: 1px solid black; }\n\n.ol-unsupported {\n  display: none; }\n\n.ol-viewport, .ol-unselectable {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }\n\n.ol-selectable {\n  -webkit-touch-callout: default;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n  -ms-user-select: text;\n  user-select: text; }\n\n.ol-grabbing {\n  cursor: -webkit-grabbing;\n  cursor: -moz-grabbing;\n  cursor: grabbing; }\n\n.ol-grab {\n  cursor: move;\n  cursor: -webkit-grab;\n  cursor: -moz-grab;\n  cursor: grab; }\n\n.ol-control {\n  position: absolute;\n  background-color: rgba(255, 255, 255, 0.4);\n  border-radius: 4px;\n  padding: 2px; }\n\n.ol-control:hover {\n  background-color: rgba(255, 255, 255, 0.6); }\n\n.ol-zoom {\n  top: .5em;\n  left: .5em; }\n\n.ol-rotate {\n  top: .5em;\n  right: .5em;\n  transition: opacity .25s linear, visibility 0s linear; }\n\n.ol-rotate.ol-hidden {\n  opacity: 0;\n  visibility: hidden;\n  transition: opacity .25s linear, visibility 0s linear .25s; }\n\n.ol-zoom-extent {\n  top: 4.643em;\n  left: .5em; }\n\n.ol-full-screen {\n  right: .5em;\n  top: .5em; }\n\n.ol-control button {\n  display: block;\n  margin: 1px;\n  padding: 0;\n  color: white;\n  font-size: 1.14em;\n  font-weight: bold;\n  text-decoration: none;\n  text-align: center;\n  height: 1.375em;\n  width: 1.375em;\n  line-height: .4em;\n  background-color: rgba(0, 60, 136, 0.5);\n  border: none;\n  border-radius: 2px; }\n\n.ol-control button::-moz-focus-inner {\n  border: none;\n  padding: 0; }\n\n.ol-zoom-extent button {\n  line-height: 1.4em; }\n\n.ol-compass {\n  display: block;\n  font-weight: normal;\n  font-size: 1.2em;\n  will-change: transform; }\n\n.ol-touch .ol-control button {\n  font-size: 1.5em; }\n\n.ol-touch .ol-zoom-extent {\n  top: 5.5em; }\n\n.ol-control button:hover,\n.ol-control button:focus {\n  text-decoration: none;\n  background-color: rgba(0, 60, 136, 0.7); }\n\n.ol-zoom .ol-zoom-in {\n  border-radius: 2px 2px 0 0; }\n\n.ol-zoom .ol-zoom-out {\n  border-radius: 0 0 2px 2px; }\n\n.ol-attribution {\n  text-align: right;\n  bottom: .5em;\n  right: .5em;\n  max-width: calc(100% - 1.3em); }\n\n.ol-attribution ul {\n  margin: 0;\n  padding: 0 .5em;\n  color: #000;\n  text-shadow: 0 0 2px #fff; }\n\n.ol-attribution li {\n  display: inline;\n  list-style: none; }\n\n.ol-attribution li:not(:last-child):after {\n  content: \" \"; }\n\n.ol-attribution img {\n  max-height: 2em;\n  max-width: inherit;\n  vertical-align: middle; }\n\n.ol-attribution ul, .ol-attribution button {\n  display: inline-block; }\n\n.ol-attribution.ol-collapsed ul {\n  display: none; }\n\n.ol-attribution:not(.ol-collapsed) {\n  background: rgba(255, 255, 255, 0.8); }\n\n.ol-attribution.ol-uncollapsible {\n  bottom: 0;\n  right: 0;\n  border-radius: 4px 0 0; }\n\n.ol-attribution.ol-uncollapsible img {\n  margin-top: -.2em;\n  max-height: 1.6em; }\n\n.ol-attribution.ol-uncollapsible button {\n  display: none; }\n\n.ol-zoomslider {\n  top: 4.5em;\n  left: .5em;\n  height: 200px; }\n\n.ol-zoomslider button {\n  position: relative;\n  height: 10px; }\n\n.ol-touch .ol-zoomslider {\n  top: 5.5em; }\n\n.ol-overviewmap {\n  left: 0.5em;\n  bottom: 0.5em; }\n\n.ol-overviewmap.ol-uncollapsible {\n  bottom: 0;\n  left: 0;\n  border-radius: 0 4px 0 0; }\n\n.ol-overviewmap .ol-overviewmap-map,\n.ol-overviewmap button {\n  display: inline-block; }\n\n.ol-overviewmap .ol-overviewmap-map {\n  border: 1px solid #7b98bc;\n  height: 150px;\n  margin: 2px;\n  width: 150px; }\n\n.ol-overviewmap:not(.ol-collapsed) button {\n  bottom: 1px;\n  left: 2px;\n  position: absolute; }\n\n.ol-overviewmap.ol-collapsed .ol-overviewmap-map,\n.ol-overviewmap.ol-uncollapsible button {\n  display: none; }\n\n.ol-overviewmap:not(.ol-collapsed) {\n  background: rgba(255, 255, 255, 0.8); }\n\n.ol-overviewmap-box {\n  border: 2px dotted rgba(0, 60, 136, 0.7); }\n\n.ol-overviewmap .ol-overviewmap-box:hover {\n  cursor: move; }\n"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/dist/cjs.js!../node_modules/react-dropdown/style.css":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/css-loader/dist/cjs.js??ref--8-1!../node_modules/postcss-loader/src??ref--8-2!../node_modules/sass-loader/dist/cjs.js!../node_modules/react-dropdown/style.css ***!
-  \**************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".Dropdown-root {\n  position: relative; }\n\n.Dropdown-control {\n  position: relative;\n  overflow: hidden;\n  background-color: white;\n  border: 1px solid #ccc;\n  border-radius: 2px;\n  box-sizing: border-box;\n  color: #333;\n  cursor: default;\n  outline: none;\n  padding: 8px 52px 8px 10px;\n  transition: all 200ms ease; }\n\n.Dropdown-control:hover {\n  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); }\n\n.Dropdown-arrow {\n  border-color: #999 transparent transparent;\n  border-style: solid;\n  border-width: 5px 5px 0;\n  content: ' ';\n  display: block;\n  height: 0;\n  margin-top: -ceil(2.5);\n  position: absolute;\n  right: 10px;\n  top: 14px;\n  width: 0; }\n\n.is-open .Dropdown-arrow {\n  border-color: transparent transparent #999;\n  border-width: 0 5px 5px; }\n\n.Dropdown-menu {\n  background-color: white;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);\n  box-sizing: border-box;\n  margin-top: -1px;\n  max-height: 200px;\n  overflow-y: auto;\n  position: absolute;\n  top: 100%;\n  width: 100%;\n  z-index: 1000;\n  -webkit-overflow-scrolling: touch; }\n\n.Dropdown-menu .Dropdown-group > .Dropdown-title {\n  padding: 8px 10px;\n  color: #333333;\n  font-weight: bold;\n  text-transform: capitalize; }\n\n.Dropdown-option {\n  box-sizing: border-box;\n  color: rgba(51, 51, 51, 0.8);\n  cursor: pointer;\n  display: block;\n  padding: 8px 10px; }\n\n.Dropdown-option:last-child {\n  border-bottom-right-radius: 2px;\n  border-bottom-left-radius: 2px; }\n\n.Dropdown-option:hover {\n  background-color: #f2f9fc;\n  color: #333; }\n\n.Dropdown-option.is-selected {\n  background-color: #f2f9fc;\n  color: #333; }\n\n.Dropdown-noresults {\n  box-sizing: border-box;\n  color: #ccc;\n  cursor: default;\n  display: block;\n  padding: 8px 10px; }\n", "",{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB,EAAE;;AAEtB;EACE,kBAAkB;EAClB,gBAAgB;EAChB,uBAAuB;EACvB,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB;EACtB,WAAW;EACX,eAAe;EACf,aAAa;EACb,0BAA0B;EAC1B,0BAA0B,EAAE;;AAE9B;EACE,uCAAuC,EAAE;;AAE3C;EACE,0CAA0C;EAC1C,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,cAAc;EACd,SAAS;EACT,sBAAsB;EACtB,kBAAkB;EAClB,WAAW;EACX,SAAS;EACT,QAAQ,EAAE;;AAEZ;EACE,0CAA0C;EAC1C,uBAAuB,EAAE;;AAE3B;EACE,uBAAuB;EACvB,sBAAsB;EACtB,uCAAuC;EACvC,sBAAsB;EACtB,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,SAAS;EACT,WAAW;EACX,aAAa;EACb,iCAAiC,EAAE;;AAErC;EACE,iBAAiB;EACjB,cAAc;EACd,iBAAiB;EACjB,0BAA0B,EAAE;;AAE9B;EACE,sBAAsB;EACtB,4BAA4B;EAC5B,eAAe;EACf,cAAc;EACd,iBAAiB,EAAE;;AAErB;EACE,+BAA+B;EAC/B,8BAA8B,EAAE;;AAElC;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,sBAAsB;EACtB,WAAW;EACX,eAAe;EACf,cAAc;EACd,iBAAiB,EAAE","file":"style.css","sourcesContent":[".Dropdown-root {\n  position: relative; }\n\n.Dropdown-control {\n  position: relative;\n  overflow: hidden;\n  background-color: white;\n  border: 1px solid #ccc;\n  border-radius: 2px;\n  box-sizing: border-box;\n  color: #333;\n  cursor: default;\n  outline: none;\n  padding: 8px 52px 8px 10px;\n  transition: all 200ms ease; }\n\n.Dropdown-control:hover {\n  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); }\n\n.Dropdown-arrow {\n  border-color: #999 transparent transparent;\n  border-style: solid;\n  border-width: 5px 5px 0;\n  content: ' ';\n  display: block;\n  height: 0;\n  margin-top: -ceil(2.5);\n  position: absolute;\n  right: 10px;\n  top: 14px;\n  width: 0; }\n\n.is-open .Dropdown-arrow {\n  border-color: transparent transparent #999;\n  border-width: 0 5px 5px; }\n\n.Dropdown-menu {\n  background-color: white;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);\n  box-sizing: border-box;\n  margin-top: -1px;\n  max-height: 200px;\n  overflow-y: auto;\n  position: absolute;\n  top: 100%;\n  width: 100%;\n  z-index: 1000;\n  -webkit-overflow-scrolling: touch; }\n\n.Dropdown-menu .Dropdown-group > .Dropdown-title {\n  padding: 8px 10px;\n  color: #333333;\n  font-weight: bold;\n  text-transform: capitalize; }\n\n.Dropdown-option {\n  box-sizing: border-box;\n  color: rgba(51, 51, 51, 0.8);\n  cursor: pointer;\n  display: block;\n  padding: 8px 10px; }\n\n.Dropdown-option:last-child {\n  border-bottom-right-radius: 2px;\n  border-bottom-left-radius: 2px; }\n\n.Dropdown-option:hover {\n  background-color: #f2f9fc;\n  color: #333; }\n\n.Dropdown-option.is-selected {\n  background-color: #f2f9fc;\n  color: #333; }\n\n.Dropdown-noresults {\n  box-sizing: border-box;\n  color: #ccc;\n  cursor: default;\n  display: block;\n  padding: 8px 10px; }\n"]}]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/dist/cjs.js!./css/main.css":
-/*!************************************************************************************************************************************************************!*\
-  !*** ../node_modules/css-loader/dist/cjs.js??ref--8-1!../node_modules/postcss-loader/src??ref--8-2!../node_modules/sass-loader/dist/cjs.js!./css/main.css ***!
-  \************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-// Module
-exports.push([module.i, ".hash-dropdown {\n  width: 200px; }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,YAAY,EAAE","file":"main.css","sourcesContent":[".hash-dropdown {\n  width: 200px; }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -79164,336 +79066,6 @@ return RBush;
 
 /***/ }),
 
-/***/ "../node_modules/react-dropdown/dist/index.js":
-/*!****************************************************!*\
-  !*** ../node_modules/react-dropdown/dist/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "../node_modules/classnames/index.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var DEFAULT_PLACEHOLDER_STRING = 'Select...';
-
-var Dropdown =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Dropdown, _Component);
-
-  function Dropdown(props) {
-    var _this;
-
-    _classCallCheck(this, Dropdown);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Dropdown).call(this, props));
-    _this.state = {
-      selected: _this.parseValue(props.value, props.options) || {
-        label: typeof props.placeholder === 'undefined' ? DEFAULT_PLACEHOLDER_STRING : props.placeholder,
-        value: ''
-      },
-      isOpen: false
-    };
-    _this.dropdownRef = (0, _react.createRef)();
-    _this.mounted = true;
-    _this.handleDocumentClick = _this.handleDocumentClick.bind(_assertThisInitialized(_this));
-    _this.fireChangeEvent = _this.fireChangeEvent.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(Dropdown, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      if (this.props.value !== prevProps.value) {
-        if (this.props.value) {
-          var selected = this.parseValue(this.props.value, this.props.options);
-
-          if (selected !== this.state.selected) {
-            this.setState({
-              selected: selected
-            });
-          }
-        } else {
-          this.setState({
-            selected: {
-              label: typeof this.props.placeholder === 'undefined' ? DEFAULT_PLACEHOLDER_STRING : this.props.placeholder,
-              value: ''
-            }
-          });
-        }
-      }
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      document.addEventListener('click', this.handleDocumentClick, false);
-      document.addEventListener('touchend', this.handleDocumentClick, false);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.mounted = false;
-      document.removeEventListener('click', this.handleDocumentClick, false);
-      document.removeEventListener('touchend', this.handleDocumentClick, false);
-    }
-  }, {
-    key: "handleMouseDown",
-    value: function handleMouseDown(event) {
-      if (this.props.onFocus && typeof this.props.onFocus === 'function') {
-        this.props.onFocus(this.state.isOpen);
-      }
-
-      if (event.type === 'mousedown' && event.button !== 0) return;
-      event.stopPropagation();
-      event.preventDefault();
-
-      if (!this.props.disabled) {
-        this.setState({
-          isOpen: !this.state.isOpen
-        });
-      }
-    }
-  }, {
-    key: "parseValue",
-    value: function parseValue(value, options) {
-      var option;
-
-      if (typeof value === 'string') {
-        for (var i = 0, num = options.length; i < num; i++) {
-          if (options[i].type === 'group') {
-            var match = options[i].items.filter(function (item) {
-              return item.value === value;
-            });
-
-            if (match.length) {
-              option = match[0];
-            }
-          } else if (typeof options[i].value !== 'undefined' && options[i].value === value) {
-            option = options[i];
-          }
-        }
-      }
-
-      return option || value;
-    }
-  }, {
-    key: "setValue",
-    value: function setValue(value, label) {
-      var newState = {
-        selected: {
-          value: value,
-          label: label
-        },
-        isOpen: false
-      };
-      this.fireChangeEvent(newState);
-      this.setState(newState);
-    }
-  }, {
-    key: "fireChangeEvent",
-    value: function fireChangeEvent(newState) {
-      if (newState.selected !== this.state.selected && this.props.onChange) {
-        this.props.onChange(newState.selected);
-      }
-    }
-  }, {
-    key: "renderOption",
-    value: function renderOption(option) {
-      var _classes;
-
-      var value = option.value;
-
-      if (typeof value === 'undefined') {
-        value = option.label || option;
-      }
-
-      var label = option.label || option.value || option;
-      var isSelected = value === this.state.selected.value || value === this.state.selected;
-      var classes = (_classes = {}, _defineProperty(_classes, "".concat(this.props.baseClassName, "-option"), true), _defineProperty(_classes, option.className, !!option.className), _defineProperty(_classes, 'is-selected', isSelected), _classes);
-      var optionClass = (0, _classnames["default"])(classes);
-      return _react["default"].createElement("div", {
-        key: value,
-        className: optionClass,
-        onMouseDown: this.setValue.bind(this, value, label),
-        onClick: this.setValue.bind(this, value, label),
-        role: "option",
-        "aria-selected": isSelected ? 'true' : 'false'
-      }, label);
-    }
-  }, {
-    key: "buildMenu",
-    value: function buildMenu() {
-      var _this2 = this;
-
-      var _this$props = this.props,
-          options = _this$props.options,
-          baseClassName = _this$props.baseClassName;
-      var ops = options.map(function (option) {
-        if (option.type === 'group') {
-          var groupTitle = _react["default"].createElement("div", {
-            className: "".concat(baseClassName, "-title")
-          }, option.name);
-
-          var _options = option.items.map(function (item) {
-            return _this2.renderOption(item);
-          });
-
-          return _react["default"].createElement("div", {
-            className: "".concat(baseClassName, "-group"),
-            key: option.name,
-            role: "listbox",
-            tabIndex: "-1"
-          }, groupTitle, _options);
-        } else {
-          return _this2.renderOption(option);
-        }
-      });
-      return ops.length ? ops : _react["default"].createElement("div", {
-        className: "".concat(baseClassName, "-noresults")
-      }, "No options found");
-    }
-  }, {
-    key: "handleDocumentClick",
-    value: function handleDocumentClick(event) {
-      if (this.mounted) {
-        if (!this.dropdownRef.current.contains(event.target)) {
-          if (this.state.isOpen) {
-            this.setState({
-              isOpen: false
-            });
-          }
-        }
-      }
-    }
-  }, {
-    key: "isValueSelected",
-    value: function isValueSelected() {
-      return typeof this.state.selected === 'string' || this.state.selected.value !== '';
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _classNames, _classNames2, _classNames3, _classNames4, _classNames5;
-
-      var _this$props2 = this.props,
-          baseClassName = _this$props2.baseClassName,
-          controlClassName = _this$props2.controlClassName,
-          placeholderClassName = _this$props2.placeholderClassName,
-          menuClassName = _this$props2.menuClassName,
-          arrowClassName = _this$props2.arrowClassName,
-          arrowClosed = _this$props2.arrowClosed,
-          arrowOpen = _this$props2.arrowOpen,
-          className = _this$props2.className;
-      var disabledClass = this.props.disabled ? 'Dropdown-disabled' : '';
-      var placeHolderValue = typeof this.state.selected === 'string' ? this.state.selected : this.state.selected.label;
-      var dropdownClass = (0, _classnames["default"])((_classNames = {}, _defineProperty(_classNames, "".concat(baseClassName, "-root"), true), _defineProperty(_classNames, className, !!className), _defineProperty(_classNames, 'is-open', this.state.isOpen), _classNames));
-      var controlClass = (0, _classnames["default"])((_classNames2 = {}, _defineProperty(_classNames2, "".concat(baseClassName, "-control"), true), _defineProperty(_classNames2, controlClassName, !!controlClassName), _defineProperty(_classNames2, disabledClass, !!disabledClass), _classNames2));
-      var placeholderClass = (0, _classnames["default"])((_classNames3 = {}, _defineProperty(_classNames3, "".concat(baseClassName, "-placeholder"), true), _defineProperty(_classNames3, placeholderClassName, !!placeholderClassName), _defineProperty(_classNames3, 'is-selected', this.isValueSelected()), _classNames3));
-      var menuClass = (0, _classnames["default"])((_classNames4 = {}, _defineProperty(_classNames4, "".concat(baseClassName, "-menu"), true), _defineProperty(_classNames4, menuClassName, !!menuClassName), _classNames4));
-      var arrowClass = (0, _classnames["default"])((_classNames5 = {}, _defineProperty(_classNames5, "".concat(baseClassName, "-arrow"), true), _defineProperty(_classNames5, arrowClassName, !!arrowClassName), _classNames5));
-
-      var value = _react["default"].createElement("div", {
-        className: placeholderClass
-      }, placeHolderValue);
-
-      var menu = this.state.isOpen ? _react["default"].createElement("div", {
-        className: menuClass,
-        "aria-expanded": "true"
-      }, this.buildMenu()) : null;
-      return _react["default"].createElement("div", {
-        ref: this.dropdownRef,
-        className: dropdownClass
-      }, _react["default"].createElement("div", {
-        className: controlClass,
-        onMouseDown: this.handleMouseDown.bind(this),
-        onTouchEnd: this.handleMouseDown.bind(this),
-        "aria-haspopup": "listbox"
-      }, value, _react["default"].createElement("div", {
-        className: "".concat(baseClassName, "-arrow-wrapper")
-      }, arrowOpen && arrowClosed ? this.state.isOpen ? arrowOpen : arrowClosed : _react["default"].createElement("span", {
-        className: arrowClass
-      }))), menu);
-    }
-  }]);
-
-  return Dropdown;
-}(_react.Component);
-
-Dropdown.defaultProps = {
-  baseClassName: 'Dropdown'
-};
-var _default = Dropdown;
-exports["default"] = _default;
-
-
-/***/ }),
-
-/***/ "../node_modules/react-dropdown/style.css":
-/*!************************************************!*\
-  !*** ../node_modules/react-dropdown/style.css ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../css-loader/dist/cjs.js??ref--8-1!../postcss-loader/src??ref--8-2!../sass-loader/dist/cjs.js!./style.css */ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/dist/cjs.js!../node_modules/react-dropdown/style.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
 /***/ "../node_modules/react-dropzone/dist/es/index.js":
 /*!*******************************************************!*\
   !*** ../node_modules/react-dropzone/dist/es/index.js ***!
@@ -81572,17 +81144,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ol_style__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ol/style */ "../node_modules/ol/style.js");
 /* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! nanoid */ "../node_modules/nanoid/index.browser.js");
 /* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./util/helpers */ "./util/helpers.ts");
-/* harmony import */ var react_dropdown__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-dropdown */ "../node_modules/react-dropdown/dist/index.js");
-/* harmony import */ var react_dropdown__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_dropdown__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-dropdown/style.css */ "../node_modules/react-dropdown/style.css");
-/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ol/ol.css */ "../node_modules/ol/ol.css");
-/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(ol_ol_css__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./css/main.css */ "./css/main.css");
-/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_15__);
-
-
-
+/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ol/ol.css */ "../node_modules/ol/ol.css");
+/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(ol_ol_css__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
@@ -81612,9 +81175,9 @@ function (_super) {
       current: 'None'
     };
 
-    _this.onSelect = function (option) {
+    _this.onSelect = function (e) {
       _this.setState({
-        current: option.value
+        current: e.target.value
       });
     };
 
@@ -81670,7 +81233,7 @@ function (_super) {
         return Object.keys(_this.perID[b]).length - Object.keys(_this.perID[a]).length;
       });
       this.setState({
-        options: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(['None'], list)
+        options: list
       });
     }
 
@@ -81715,14 +81278,14 @@ function (_super) {
 
       if (this.state.current == 'None') {
         this.setState({
-          options: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(['None'], list)
+          options: list
         });
         return;
       }
 
       if (!this.perID[this.state.current]) {
         this.setState({
-          options: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(['None'], list),
+          options: list,
           current: 'None'
         });
         return;
@@ -81772,12 +81335,19 @@ function (_super) {
         width: width,
         height: height
       }
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_dropdown__WEBPACK_IMPORTED_MODULE_12___default.a, {
-      className: "hash-dropdown",
-      options: options,
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
+      id: "selector",
+      style: {
+        width: 250
+      },
       onChange: this.onSelect,
       value: current
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, "None"), options.map(function (item) {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        key: item,
+        value: item
+      }, item);
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       id: this.id,
       style: {
         width: width,
@@ -81790,37 +81360,6 @@ function (_super) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
 
 
-
-/***/ }),
-
-/***/ "./css/main.css":
-/*!**********************!*\
-  !*** ./css/main.css ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--8-1!../../node_modules/postcss-loader/src??ref--8-2!../../node_modules/sass-loader/dist/cjs.js!./main.css */ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/dist/cjs.js!./css/main.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
 
 /***/ }),
 

@@ -19,7 +19,6 @@
     "@types/ol": "^6.4.2",
     "nanoid": "^3.1.16",
     "ol": "^6.4.3",
-    "react-dropdown": "^1.9.0",
     "react-dropzone": "^11.2.4"
   }
 }
