@@ -68,10 +68,10 @@ export const createHeatLayer = (byID: { [key: string]: number }, geojson: GeoJSO
 
   const polygons: Feature<Polygon>[] = [];
   geojson.features.map(feature => {
-    if (feature.properties && feature.properties.id) {
-      const valueLabel = byID[feature.properties.id] || 0;
+    if (feature.properties && feature.properties.name) {
+      const valueLabel = byID[feature.properties.name] || 0;
       let percentage = 0;
-      if (byIdLog[feature.properties.id] && max != 0) percentage = (byIdLog[feature.properties.id] - 0) / max;
+      if (byIdLog[feature.properties.name] && max != 0) percentage = (byIdLog[feature.properties.name] - 0) / max;
 
       polygons.push(createPolygon(feature, valueLabel.toString(), percentageToHsl(percentage)));
     }
